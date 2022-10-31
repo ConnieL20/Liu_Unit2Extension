@@ -1,8 +1,8 @@
 public class Calculator {
 
     //instance variables
-    private double firstValue;
-    private double secondValue;
+    private final double firstValue;
+    private final double secondValue;
 
     //calculator constructor
     public Calculator(double firstValue, double secondValue) {
@@ -12,19 +12,31 @@ public class Calculator {
 
     //addition
     public double addition(){
-        double sum = firstValue + secondValue;
-        return sum;
+        return firstValue + secondValue;
     }
 
     //subtraction
     public double subtraction() {
-        double difference = firstValue - secondValue;
-        return difference;
+        return firstValue - secondValue;
     }
 
     //multiplication
     public double multiplication() {
-        double product = firstValue * secondValue;
-        return product;
+        return firstValue * secondValue;
+    }
+
+    //division
+    public double division() {
+        return firstValue / secondValue;
+    }
+
+    //exponent
+    public double exponent() {
+        return Math.pow(firstValue, secondValue);
+    }
+
+    //mod
+    public double mod() {
+        return firstValue % secondValue;
     }
 }
